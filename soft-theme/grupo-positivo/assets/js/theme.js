@@ -519,8 +519,42 @@ var theme = {
     }
     step1();
   },
+  preCheckout: function () {
+    theme.default();
+    function step1() {
+      const $messageBg = $("#soft-pages #pre-checkout .message-bg");
+      const $messageText = $("#soft-pages #pre-checkout .message-text");
+      const $btn = $("#soft-pages #pre-checkout .btn-checkout");
+
+      var tl = gsap.timeline();
+      tl.to($messageBg, {
+        delay: 2,
+        duration: 1,
+        scale: 1,
+        opacity: 1,
+        ease: "expo.out",
+      }).to($messageText, {
+        duration: 1,
+        scale: 1,
+        opacity: 1,
+        ease: "expo.out",
+        onComplete: function () {
+          fancyShow($btn, step2);
+        },
+      });
+    }
+    function step2() {
+      theme.endTransition();
+
+      const $btn = $("#soft-pages #pre-checkout .btn-checkout");
+      $btn.one("click", function () {
+        theme.goToPage("checkout");
+      });
+    }
+    step1();
+  },
+
   gameplay: function () {},
-  preCheckout: function () {},
   checkout: function () {},
 
   resetVars: function () {

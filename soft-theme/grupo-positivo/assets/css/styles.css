@@ -652,6 +652,70 @@ body#soft main #soft-pages .soft-current-page#list .btn-gameplay .bg {
   width: 349px;
   height: 139px;
 }
+body#soft main #soft-pages .soft-current-page#pre-checkout {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .soft-scaled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .message {
+  width: 1388px;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .message-bg {
+  opacity: 0;
+  transform: scale(0);
+  background-image: url(../img/07_pre-caixa/box.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1147px;
+  height: 480px;
+  position: absolute;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .message-text {
+  opacity: 0;
+  transform: scale(0);
+  background-image: url(../img/07_pre-caixa/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 686px;
+  height: 275px;
+  position: absolute;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .btn-checkout {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  margin: auto;
+  width: 349px;
+  height: 139px;
+  bottom: 240px;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .btn-checkout::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#pre-checkout .btn-checkout .bg {
+  background-image: url(../img/07_pre-caixa/botao_ir.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
 body#soft .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;

@@ -406,6 +406,51 @@ body#soft
               background-size: 100% 100%
               width: 349px
               height: 139px
+        &#pre-checkout
+          @include background('00_main/background.jpg')
+          background-size: cover
+          display: flex
+          .soft-scaled
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+          .message
+            width: 1388px
+            height: 650px
+            display: flex
+            justify-content: center
+            align-items: center
+          .message-bg
+            opacity: 0
+            transform: scale(0)
+            @include background('07_pre-caixa/box.png')
+            width: 1147px
+            height: 480px
+            position: absolute
+          .message-text
+            opacity: 0
+            transform: scale(0)
+            @include background('07_pre-caixa/txt.png')
+            width: 686px
+            height: 275px
+            position: absolute
+          .btn-checkout
+            opacity: 0
+            transform: scale(0)
+            position: absolute
+            margin: auto
+            width: 349px
+            height: 139px
+            bottom: 240px
+            &::before
+              content: none
+            .bg
+              @include background('07_pre-caixa/botao_ir.png')
+              background-size: 100% 100%
+              width: 349px
+              height: 139px
+
   .overlay
     background-color: rgba(0, 0, 0, 0.5)
     position: absolute
