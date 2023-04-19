@@ -886,6 +886,21 @@ body#soft
             &.btn-right
               @include background('09_escolher-pagamento/pagar_cartao.png')
               right: 500px
+        &#checkout-end
+          .btn
+            opacity: 0
+            transform: scale(0)
+            position: absolute
+            bottom: 60px
+            width: 392px
+            height: 217px
+            background-position: center bottom !important
+            &.btn-left
+              @include background('10_jogar-novamente/Sair.png')
+              left: 500px
+            &.btn-right
+              @include background('10_jogar-novamente/jogar_novamente.png')
+              right: 500px
 
   .overlay
     background-color: rgba(0, 0, 0, 0.5)

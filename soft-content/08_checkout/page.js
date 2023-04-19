@@ -42,7 +42,7 @@ var pageCheckout = {
 
 var pageCheckoutItem = {
   ...pageCheckout,
-  pageShowMethod: "theme.checkoutItem()",
+  pageShowMethod: "theme.checkoutItems()",
 };
 var pageCheckoutPayment = {
   ...pageCheckout,

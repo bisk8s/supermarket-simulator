@@ -1423,6 +1423,29 @@ body#soft main #soft-pages .soft-current-page#checkout-payment .btn.btn-right {
   background-size: contain;
   right: 500px;
 }
+body#soft main #soft-pages .soft-current-page#checkout-end .btn {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  bottom: 60px;
+  width: 392px;
+  height: 217px;
+  background-position: center bottom !important;
+}
+body#soft main #soft-pages .soft-current-page#checkout-end .btn.btn-left {
+  background-image: url(../img/10_jogar-novamente/Sair.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 500px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-end .btn.btn-right {
+  background-image: url(../img/10_jogar-novamente/jogar_novamente.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 500px;
+}
 body#soft .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;

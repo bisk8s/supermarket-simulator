@@ -882,7 +882,7 @@ var theme = {
     }
     step1();
   },
-  checkoutItem: function () {
+  checkoutItems: function () {
     theme.checkout();
 
     const $content = $(".items-content");
@@ -1065,6 +1065,24 @@ var theme = {
   },
   checkoutEnd: function () {
     theme.checkout();
+
+    const $btnL = $("#soft-pages .checkout .btn-left");
+    const $btnR = $("#soft-pages .checkout .btn-right");
+
+    setTimeout(function () {
+      fancyShow($btnL, function () {
+        fancyShow($btnR);
+      });
+    }, 3000);
+
+    $btnL.one("click", function () {
+      $btnR.off("click");
+      theme.goToPage("start");
+    });
+    $btnR.one("click", function () {
+      $btnL.off("click");
+      theme.goToPage("char-selection");
+    });
   },
 
   updateList: function () {
