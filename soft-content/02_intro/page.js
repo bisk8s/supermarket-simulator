@@ -10,7 +10,7 @@ var pageIntro = {
     '\
       <div class="soft-scaled" initial-width="1920" initial-height="1080">\
         <div class="container">\
-          <div class="bg"></div>\
+          <div class="bg-intro"></div>\
           <div class="content"></div>\
         </div>\
       </div>\

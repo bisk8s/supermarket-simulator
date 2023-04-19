@@ -339,7 +339,7 @@ var theme = {
   intro: function () {
     theme.default();
     function step1() {
-      const $bg = $("#soft-pages #intro .bg");
+      const $bg = $("#soft-pages #intro .bg-intro");
       const $content = $("#soft-pages #intro .content");
       var tl = gsap.timeline();
       tl.to($bg, {
@@ -365,7 +365,7 @@ var theme = {
         .to($bg, {
           duration: 1,
           left: 2000,
-          opacity: 1,
+          opacity: 0,
           ease: "expo.out",
           onComplete: step2,
         });

@@ -344,7 +344,7 @@ body#soft main #soft-pages .soft-current-page#intro .soft-scaled .container {
   align-items: center;
   position: relative;
 }
-body#soft main #soft-pages .soft-current-page#intro .soft-scaled .container .bg {
+body#soft main #soft-pages .soft-current-page#intro .soft-scaled .container .bg-intro {
   background-image: url(../img/02_abertura/box.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -397,7 +397,7 @@ body#soft main #soft-pages .soft-current-page#char-selection .title {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center left !important;
-  width: 859px;
+  width: 100vw;
   height: 61px;
   position: absolute;
   top: 0px;
@@ -477,7 +477,7 @@ body#soft main #soft-pages .soft-current-page#cart .title {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center left !important;
-  width: 859px;
+  width: 100vw;
   height: 61px;
   position: absolute;
   top: 0px;
