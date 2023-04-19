@@ -752,6 +752,38 @@ body#soft main #soft-pages .soft-current-page#gameplay .prateleiras {
   left: 0;
   top: 0;
 }
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars {
+  position: absolute;
+  bottom: 100px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars .char {
+  width: 671px;
+  height: 585px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars .char.char-f[data-frame="0"] {
+  background-image: url(../img/06_cenario/chars/f_1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars .char.char-f[data-frame="1"] {
+  background-image: url(../img/06_cenario/chars/f_2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars .char.char-m[data-frame="0"] {
+  background-image: url(../img/06_cenario/chars/m_1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars .char.char-m[data-frame="1"] {
+  background-image: url(../img/06_cenario/chars/m_2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 body#soft main #soft-pages .soft-current-page#gameplay .profile {
   width: 318px;
   height: 188px;

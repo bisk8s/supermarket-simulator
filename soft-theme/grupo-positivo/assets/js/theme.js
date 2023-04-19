@@ -606,8 +606,13 @@ var theme = {
 
   gameplay: function () {
     theme.default();
+    const char = theme.vars.char;
+
+    $(".char").hide();
+    const $char = $("#soft-pages #gameplay .char-" + char);
+    $char.first().show();
+
     function step1() {
-      const char = theme.vars.char;
       const $profile = $("#soft-pages #gameplay .profile-" + char);
       const $btn = $("#soft-pages #gameplay .btn-list");
 
@@ -681,18 +686,34 @@ var theme = {
 
       setupControlls();
     }
-
     function setupControlls() {
       const $prateleira = $("#soft-pages #gameplay .prateleiras");
       const $btnNext = $("#soft-pages #gameplay .btn-next");
       const $btnPrev = $("#soft-pages #gameplay .btn-prev");
 
       const pos = $prateleira.position();
+      const frameA = { attr: { "data-frame": "0" } };
+      const frameB = { attr: { "data-frame": "1" } };
+
+      const anim = function () {
+        gsap.fromTo($char, frameA, {
+          duration: 0.1,
+          ease: booleanEasing,
+          repeat: 3,
+          yoyo: true,
+          ...frameB,
+        });
+      };
 
       if (pos.left > -1332) {
         fancyShow($btnNext);
         $btnNext.one("click", function () {
+          anim();
           hideButtons();
+          gsap.to($char, {
+            x: "+=1080",
+            duration: 0.5,
+          });
           gsap.to($prateleira, {
             x: "-=1080",
             duration: 1,
@@ -704,7 +725,22 @@ var theme = {
       if (pos.left < 0) {
         fancyShow($btnPrev);
         $btnPrev.one("click", function () {
+          anim();
           hideButtons();
+          gsap.to($char, {
+            x: "-=1080",
+            duration: 0.5,
+            onComplete: function () {
+              gsap.to($char, {
+                scaleX: 1,
+                duration: 0,
+              });
+            },
+          });
+          gsap.to($char, {
+            scaleX: -1,
+            duration: 0,
+          });
           gsap.to($prateleira, {
             x: "+=1080",
             duration: 1,
@@ -720,7 +756,6 @@ var theme = {
         gsap.to($btnPrev, { scale: 0, alpha: 0, duration: 0.2 });
       }
     }
-
     step1();
   },
   checkout: function () {},
@@ -804,4 +839,10 @@ function fancyShow(element, onComplete = null) {
     .to(element, { skewY: 0, duration: 0.1 })
     .to(element, { rotation: 2, duration: 0.1 })
     .to(element, { rotation: 0, duration: 0.1, onComplete: onComplete });
+}
+
+function booleanEasing(progress) {
+  const threshold = 0.5;
+  const response = progress >= threshold ? 1 : 0;
+  return response;
 }

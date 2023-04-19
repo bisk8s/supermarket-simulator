@@ -475,6 +475,22 @@ body#soft
             position: absolute
             left: 0
             top: 0
+            .chars
+              position: absolute
+              bottom: 100px
+              .char
+                width: 671px
+                height: 585px
+                &.char-f
+                  &[data-frame="0"]
+                    @include background('06_cenario/chars/f_1.png')
+                  &[data-frame="1"]
+                    @include background('06_cenario/chars/f_2.png')
+                &.char-m
+                  &[data-frame="0"]
+                    @include background('06_cenario/chars/m_1.png')
+                  &[data-frame="1"]
+                    @include background('06_cenario/chars/m_2.png')
           .profile
             width: 318px
             height: 188px
