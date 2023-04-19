@@ -30,6 +30,38 @@ var theme = {
     ],
     list: [],
     cart: [],
+    priceTable: {
+      abacate: 2.45,
+      alface: 1.45,
+      banana: 1.75,
+      batata: 2.15,
+      beterraba: 1.95,
+      bife: 5.35,
+      biscoito: 2.85,
+      bolo: 4.25,
+      brocolis: 3.55,
+      carne: 4.75,
+      cenoura: 2.35,
+      coca: 1.65,
+      frango: 3.25,
+      goiaba: 1.85,
+      iogurte: 2.45,
+      leite: 3.55,
+      limao: 1.75,
+      maca: 3.15,
+      mexirica: 2.65,
+      milho: 0.95,
+      pao: 2.35,
+      peixe: 2.95,
+      queijo: 3.15,
+      rosquinha: 1.95,
+      salmao: 4.95,
+      "suco-laranja": 2.15,
+      "suco-limao": 1.25,
+      "suco-uva": 3.25,
+      tomate: 2.25,
+      uva: 2.05,
+    },
   },
 
   audios: {
@@ -877,9 +909,159 @@ var theme = {
       const clampedX = clamp(-limit, limit, newX);
       gsap.to($content, { x: clampedX, duration: 1 });
     });
+
+    $(".item").one("mousedown", function (e) {
+      const $item = $(this);
+      const $stage = $(".soft-scaled");
+
+      gsap.to($(".checkout .items-area"), { scale: 0, alpha: 0 });
+      gsap.to($(".checkout .btn"), { scale: 0, alpha: 0 });
+
+      const $newItem = $item.clone();
+      $item.remove();
+
+      $stage.append($newItem);
+      $newItem.css({
+        position: "absolute",
+        transform: "translate(-50%, -50%)",
+        opacity: 0,
+        bottom: 20,
+      });
+      $newItem.css("pointer-events", "none !important");
+
+      gsap.to(
+        $newItem,
+        {
+          opacity: 1,
+          left: 960,
+          top: 880,
+          width: 300,
+          height: 300,
+          opacity: 1,
+          duration: 0.5,
+        },
+        "someLabel"
+      );
+
+      $newItem.one("mousedown", function () {
+        $stage.on("mousemove", function (e) {
+          const event = e.originalEvent;
+          if (event.target === $stage[0]) {
+            const target = { left: event.layerX, top: event.layerY };
+            var tl = gsap.timeline();
+            tl.to($newItem, { ...target, duration: 0.5 }, "someLabel");
+
+            const point = {
+              x: target.left,
+              y: target.top,
+            };
+
+            const boundingBox = {
+              x1: 756,
+              y1: 308,
+              x2: 953,
+              y2: 497,
+            };
+
+            const isInsideBoundingBox =
+              point.x >= boundingBox.x1 &&
+              point.x <= boundingBox.x2 &&
+              point.y >= boundingBox.y1 &&
+              point.y <= boundingBox.y2;
+
+            if (isInsideBoundingBox) {
+              $stage.off("mousemove");
+              theme.audios.beep.play();
+              const $scaner = $(".scanner");
+              var tl = gsap.timeline();
+
+              tl.to($scaner, {
+                opacity: 1,
+                duration: 0.1,
+              }).to($scaner, {
+                opacity: 0,
+                duration: 1,
+              });
+
+              gsap.to($newItem, {
+                scale: 0,
+                opacity: 0,
+                duration: 1,
+                onComplete: function () {
+                  $newItem.remove();
+                  gsap.to($(".checkout .items-area"), { scale: 1, alpha: 1 });
+                  gsap.to($(".checkout .btn"), { scale: 1, alpha: 1 });
+
+                  if ($(".item").length <= 0) {
+                    theme.goToPage("checkout-payment");
+                  }
+                },
+              });
+            }
+          }
+        });
+      });
+    });
   },
   checkoutPayment: function () {
     theme.checkout();
+
+    const $btnL = $("#soft-pages .checkout .btn-left");
+    const $btnR = $("#soft-pages .checkout .btn-right");
+
+    const cart = ratClone(theme.vars.cart);
+    const priceTable = ratClone(theme.vars.priceTable);
+
+    const total = cart
+      .map((key) => priceTable[key])
+      .reduce((acc, cur) => acc + cur, 0);
+
+    const $valueContainer = $(".value-container");
+    const $value = $(".value");
+
+    var tl = gsap.timeline();
+
+    tl.to($valueContainer, { opacity: 1, scale: 1, duration: 1, delay: 2 }).to(
+      $value,
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        onComplete: function () {
+          $({ numberValue: $value.text() }).animate(
+            { numberValue: total },
+            {
+              duration: 1000,
+              easing: "linear",
+              step: function () {
+                $value.text("$ " + parseFloat(this.numberValue).toFixed(2));
+                if (!theme.audios.pickItem.playing())
+                  theme.audios.pickItem.play();
+              },
+              complete: function () {
+                $value.text("$ " + parseFloat(this.numberValue).toFixed(2));
+                btnAnim();
+              },
+            }
+          );
+        },
+      }
+    );
+
+    function btnAnim() {
+      fancyShow($btnL, function () {
+        fancyShow($btnR);
+      });
+    }
+
+    $btnL.one("click", function () {
+      $btnR.off("click");
+      theme.goToPage("checkout-end");
+    });
+    $btnR.one("click", function () {
+      $btnL.off("click");
+      theme.goToPage("checkout-end");
+    });
   },
   checkoutEnd: function () {
     theme.checkout();
