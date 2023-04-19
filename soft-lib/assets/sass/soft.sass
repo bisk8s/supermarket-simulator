@@ -1,0 +1,36 @@
+@charset "utf-8"
+
+@import mixin
+
+body#soft
+	
+    &.no-user-select
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -o-user-select: none
+        user-select: none
+
+    &.no-user-drag, &.no-user-drag img
+        -webkit-user-drag: none
+        -khtml-user-drag: none
+        -moz-user-drag: none
+        -o-user-drag: none
+        user-drag: none
+
+    &.invert-color
+        filter: invert(1)
+
+    &.events-none, &.events-none *
+        pointer-events: none !important
+
+    .soft-inactive
+        pointer-events: none !important
+
+    & > main
+
+        #soft-pages
+
+            .soft-page
+
+                &.soft-current-page

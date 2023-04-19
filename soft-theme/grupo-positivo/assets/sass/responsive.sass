@@ -1,0 +1,232 @@
+@charset "utf-8"
+
+@import mixin
+
+body#soft
+
+  // Horizontal
+  &.horizontal-orientation
+
+    main
+
+      #soft-pages
+
+        .soft-current-page
+
+  
+      // Top buttons
+      @media (max-height: 730px)
+
+        #top-buttons
+
+          .buttons
+            transform: scale(0.8)
+            top: 20px
+            right: 25px
+
+      @media (max-height: 500px)
+
+        #top-buttons
+
+          .buttons
+            transform: scale(0.7)
+
+      @media (max-height: 400px)
+
+        #top-buttons
+
+          .buttons
+            transform: scale(0.6)
+            top: 10px
+            right: 15px
+
+      @media (max-height: 290px)
+
+        #top-buttons
+
+          .buttons
+            transform: scale(0.4)
+            top: 5px
+            right: 10px
+
+
+  // Overlays
+  @media (max-height: 330px)
+
+    .overlay
+
+      .wrap-scaled
+
+        .content-box
+          max-width: 1500px
+          box-sizing: border-box
+          padding: 110px 150px
+          width: 80%
+
+          h2
+            font-size: 80px
+            padding-bottom: 40px
+            border-bottom: 6px solid #fff
+
+          & > div *
+            font-size: 45px
+            line-height: 65px
+
+            h3
+              font-size: 50px
+              line-height: 70px
+
+            strong
+              font-size: 55px
+
+          .buttons
+            margin-top: 55px
+
+            .btn-prev, .btn-next
+              width: 330px
+              height: 140px
+
+              p
+                font-size: 45px
+                line-height: 138px
+
+      &#exit-home
+
+        .wrap-scaled
+
+          .content-box
+            max-width: 1300px
+
+
+// Overlays específicos por página
+body#soft
+
+  main
+
+    #soft-pages
+
+      .soft-current-page
+
+        &#gameplay
+
+          .overlay
+
+            &.overlay-0
+
+              .wrap-scaled
+
+                @media (max-height: 330px)
+
+                  .content-box
+                    max-width: 1500px
+
+            &.overlay-1
+
+              .wrap-scaled
+
+                @media (max-height: 330px)
+
+                  .content-box
+                    width: 100%
+                    max-width: 1300px
+
+                    img.img-1
+                      width: 40%
+
+                    img.img-2
+                      width: 80%
+
+            &.overlay-2
+
+              .wrap-scaled
+
+                @media (max-height: 330px)
+
+                  .content-box
+                    width: 80%
+                    max-width: initial
+                    padding: 80px 150px 100px
+                    top: 51%
+
+                    img.img-1
+                      width: 60%
+
+                    img.img-2
+                      width: 60%
+
+            &.overlay-question
+
+              .wrap-scaled
+
+                @media (max-height: 330px)
+
+                  .content-box
+                    width: 100%
+                    max-width: initial
+
+                    img.img-1
+                      width: 60%
+
+                    img.img-2
+                      width: 60%
+
+                    span
+                      font-size: 50px !important
+                      width: 220px !important
+
+                    .buttons
+                      margin-top: 55px
+
+                      .alternative-btn
+                        width: 230px
+                        height: 120px
+
+                        p
+                          line-height: 105px
+
+                        &.correct-active, &.incorrect-active
+
+                          p
+                            line-height: 110px
+
+                      .btn-next
+                        display: block
+                        margin: 40px auto 0
+
+            &.overlay-3
+
+              .wrap-scaled
+
+                @media (max-height: 330px)
+
+                  .content-box
+                    max-width: 1200px
+                    
+                    .buttons
+
+                      .btn-prev
+                        
+                        p
+                          line-height: 48px
+
+        &#text-draw
+
+          .overlay
+
+            &.overlay-0
+
+              .wrap-scaled
+
+                @media (max-height: 330px)
+
+                  .content-box
+                    max-width: 1900px
+                    width: 100%
+
+  // Vertical
+  @media (orientation: portrait)
+
+    main
+
+      #device-rotate
+        display: block
