@@ -823,7 +823,10 @@ var theme = {
     }
     step1();
   },
-  checkout: function () {},
+  checkout: function () {
+    theme.default();
+    theme.updateCart();
+  },
 
   updateList: function () {
     const buyable = ratClone(theme.vars.buyable);
@@ -832,6 +835,14 @@ var theme = {
       list = buyable.sort(randomSort).slice(0, 18);
     }
     theme.vars.list = list;
+  },
+  updateCart: function () {
+    theme.updateList();
+    var cart = theme.vars.cart;
+    if (cart.length === 0) {
+      cart = ratClone(theme.vars.list);
+    }
+    theme.vars.cart = cart;
   },
 
   resetVars: function () {
