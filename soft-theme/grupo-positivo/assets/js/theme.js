@@ -605,6 +605,54 @@ var theme = {
         theme.goToPage("list");
       });
 
+      const $prateleira = $("#soft-pages #gameplay .prateleiras");
+      const $spawn = $("#soft-pages #gameplay .spawn-item");
+      $spawn.off("mousedown");
+      $spawn.on("mousedown", function (e) {
+        gsap.to($spawn, { scale: 0 });
+        const event = e.originalEvent;
+        const $this = $(this);
+
+        const top = +$this.css("top").replace("px", "");
+        const left = +$this.css("left").replace("px", "");
+        const target = {
+          left: event.layerX + left,
+          top: event.layerY + top,
+        };
+
+        const classAttr = $this.attr("class").replace("spawn", "drag");
+        const $newItem = $('<div class="' + classAttr + '"></div>');
+
+        $prateleira.append($newItem);
+        $newItem.css(target);
+        gsap.to($newItem, {
+          ...target,
+          opacity: 1,
+          scale: 1,
+          duration: 0.2,
+          onComplete: function () {
+            $prateleira.on("mousemove", function (e) {
+              const event = e.originalEvent;
+              const target = { left: event.layerX, top: event.layerY };
+              var tl = gsap.timeline();
+              tl.to($newItem, { ...target, duration: 0.5 }, "someLabel");
+            });
+          },
+        });
+
+        $(document).one("mouseup", function () {
+          $prateleira.off("mousemove");
+          gsap.to($newItem, {
+            opacity: 0,
+            scale: 0,
+            onComplete: function () {
+              gsap.to($spawn, { scale: 1 });
+              $newItem.remove();
+            },
+          });
+        });
+      });
+
       setupControlls();
     }
 
@@ -614,15 +662,6 @@ var theme = {
       const $btnPrev = $("#soft-pages #gameplay .btn-prev");
 
       const pos = $prateleira.position();
-
-      $prateleira.off("click");
-      $prateleira.on("click", function (e) {
-        const left = e.originalEvent.layerX + "px";
-        const top = e.originalEvent.layerY + "px";
-        console.log(
-          JSON.stringify({ left, top }, null, 4).replace(/[\{\}\"\,}]/g, "")
-        );
-      });
 
       if (pos.left > -1332) {
         fancyShow($btnNext);

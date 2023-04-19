@@ -41,12 +41,12 @@ var pageGameplay = {
           <div class="spawn-item suco-uva" />\
           <div class="spawn-item tomate" />\
           <div class="spawn-item uva" />\
-        </div>\
-        <div class="char">\
-          <div class="char-f-a" />\
-          <div class="char-f-b" />\
-          <div class="char-m-a" />\
-          <div class="char-m-b" />\
+          <div class="char">\
+            <div class="char-f-a" />\
+            <div class="char-f-b" />\
+            <div class="char-m-a" />\
+            <div class="char-m-b" />\
+          </div>\
         </div>\
         <div class="soft-btn btn btn-list" />\
         <div class="profile" >\

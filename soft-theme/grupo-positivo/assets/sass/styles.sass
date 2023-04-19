@@ -468,6 +468,7 @@ body#soft
             &::before
               content: none
           .prateleiras
+            pointer-events: auto !important
             @include background('06_cenario/prateleiras.png')
             width: 5502px
             height: 1080px
@@ -495,6 +496,7 @@ body#soft
               width: 318px
               height: 188px
           .spawn-item
+            opacity: 0
             position: absolute
             width: 140px
             height: 140px
@@ -614,6 +616,76 @@ body#soft
             &.uva
               left: 1290px
               top: 590px
+          .drag-item
+            pointer-events: none !important
+            position: absolute
+            transform: scale(0)
+            opacity: 0
+            width: 140px
+            height: 140px
+            transform: translate(-50%,-50%)
+            &.abacate
+              @include background('08_caixa/alimentos/abacate.png')
+            &.alface
+              @include background('08_caixa/alimentos/alface.png')
+            &.banana
+              @include background('08_caixa/alimentos/banana.png')
+            &.batata
+              @include background('08_caixa/alimentos/batata.png')
+            &.beterraba
+              @include background('08_caixa/alimentos/beterraba.png')
+            &.bife
+              @include background('08_caixa/alimentos/bife.png')
+            &.biscoito
+              @include background('08_caixa/alimentos/biscoito.png')
+            &.bolo
+              @include background('08_caixa/alimentos/bolo.png')
+              width: 200px
+              height: 200px
+            &.brocolis
+              @include background('08_caixa/alimentos/brocolis.png')
+            &.carne
+              @include background('08_caixa/alimentos/carne.png')
+            &.cenoura
+              @include background('08_caixa/alimentos/cenoura.png')
+            &.coca
+              @include background('08_caixa/alimentos/coca.png')
+            &.frango
+              @include background('08_caixa/alimentos/frango.png')
+            &.goiaba
+              @include background('08_caixa/alimentos/goiaba.png')
+            &.iogurte
+              @include background('08_caixa/alimentos/iogurte.png')
+            &.leite
+              @include background('08_caixa/alimentos/leite.png')
+            &.limao
+              @include background('08_caixa/alimentos/limao.png')
+            &.maca
+              @include background('08_caixa/alimentos/maca.png')
+            &.mexirica
+              @include background('08_caixa/alimentos/mexirica.png')
+            &.milho
+              @include background('08_caixa/alimentos/milho.png')
+            &.pao
+              @include background('08_caixa/alimentos/pao.png')
+            &.peixe
+              @include background('08_caixa/alimentos/peixe.png')
+            &.queijo
+              @include background('08_caixa/alimentos/queijo.png')
+            &.rosquinha
+              @include background('08_caixa/alimentos/rosquinha.png')
+            &.salmao
+              @include background('08_caixa/alimentos/salmao.png')
+            &.suco-laranja
+              @include background('08_caixa/alimentos/suco-laranja.png')
+            &.suco-limao
+              @include background('08_caixa/alimentos/suco-limao.png')
+            &.suco-uva
+              @include background('08_caixa/alimentos/suco-uva.png')
+            &.tomate
+              @include background('08_caixa/alimentos/tomate.png')
+            &.uva
+              @include background('08_caixa/alimentos/uva.png')
           .btn-next
             opacity: 0
             transform: scale(0)
