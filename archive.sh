@@ -1,3 +1,3 @@
 #!/bin/sh
 
-git archive --format zip --output jogo-da-alimentacao-$(date +%Y-%m-%d-%H-%M-%S).zip main
+git archive --format zip --output super-market-simulator-$(date +%Y-%m-%d-%H-%M-%S).zip main
