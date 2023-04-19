@@ -780,6 +780,158 @@ body#soft main #soft-pages .soft-current-page#gameplay .profile .profile-m {
   width: 318px;
   height: 188px;
 }
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  pointer-events: auto !important;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.abacate {
+  left: 1190px;
+  top: 350px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.alface {
+  left: 633px;
+  top: 478px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.banana {
+  left: 1380px;
+  top: 480px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.batata {
+  left: 838px;
+  top: 342px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.beterraba {
+  left: 710px;
+  top: 598px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.bife {
+  left: 4079px;
+  top: 491px;
+  height: 100px;
+  width: 400px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.biscoito {
+  left: 2200px;
+  top: 374px;
+  height: 70px;
+  width: 180px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.bolo {
+  left: 1953px;
+  top: 298px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.brocolis {
+  left: 570px;
+  top: 600px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.carne {
+  left: 4080px;
+  top: 357px;
+  height: 110px;
+  width: 390px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.cenoura {
+  left: 610px;
+  top: 340px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.coca {
+  left: 3463px;
+  top: 613px;
+  height: 90px;
+  width: 230px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.frango {
+  left: 4077px;
+  top: 606px;
+  width: 390px;
+  height: 100px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.goiaba {
+  left: 1170px;
+  top: 600px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.iogurte {
+  left: 2738px;
+  top: 508px;
+  height: 100px;
+  width: 300px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.leite {
+  width: 260px;
+  left: 2684px;
+  top: 347px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.limao {
+  left: 1410px;
+  top: 350px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.maca {
+  left: 1180px;
+  top: 490px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.mexirica {
+  left: 1422px;
+  top: 590px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.milho {
+  left: 860px;
+  top: 598px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.pao {
+  width: 390px;
+  left: 1848px;
+  top: 516px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.peixe {
+  left: 4753px;
+  top: 525px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.peixe.i-2 {
+  left: 5133px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.queijo {
+  left: 2725px;
+  top: 628px;
+  height: 90px;
+  width: 340px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.rosquinha {
+  left: 2266px;
+  top: 527px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.salmao {
+  left: 4946px;
+  top: 525px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.suco-laranja {
+  left: 3463px;
+  top: 354px;
+  height: 110px;
+  width: 200px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.suco-limao {
+  left: 3595px;
+  top: 488px;
+  height: 100px;
+  width: 190px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.suco-uva {
+  left: 3401px;
+  top: 490px;
+  height: 100px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.tomate {
+  left: 860px;
+  top: 486px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .spawn-item.uva {
+  left: 1290px;
+  top: 590px;
+}
 body#soft main #soft-pages .soft-current-page#gameplay .btn-next {
   opacity: 0;
   transform: scale(0);

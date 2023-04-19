@@ -5,6 +5,30 @@ var theme = {
   vars: {
     globalOverlayShow: false,
     char: "f",
+    list: [
+      "abacate",
+      "alface",
+      "tomate",
+      "beterraba",
+      "bife",
+      "biscoito",
+      "bolo",
+      "brocolis",
+      "carne",
+      "cenoura",
+      "frango",
+      "goiaba",
+      "leite",
+      "maca",
+      "mexirica",
+      "milho",
+      "pao",
+      "peixe",
+      "salmao",
+      "suco-laranja",
+      "suco-uva",
+    ],
+    cart: [],
   },
 
   audios: {
@@ -590,6 +614,15 @@ var theme = {
       const $btnPrev = $("#soft-pages #gameplay .btn-prev");
 
       const pos = $prateleira.position();
+
+      $prateleira.off("click");
+      $prateleira.on("click", function (e) {
+        const left = e.originalEvent.layerX + "px";
+        const top = e.originalEvent.layerY + "px";
+        console.log(
+          JSON.stringify({ left, top }, null, 4).replace(/[\{\}\"\,}]/g, "")
+        );
+      });
 
       if (pos.left > -1332) {
         fancyShow($btnNext);
