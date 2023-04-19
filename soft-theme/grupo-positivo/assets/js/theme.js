@@ -487,7 +487,38 @@ var theme = {
     }
     step1();
   },
-  list: function () {},
+  list: function () {
+    theme.default();
+    function step1() {
+      const $header = $("#soft-pages #list .header");
+      const $title = $("#soft-pages #list .title");
+      const $btn = $("#soft-pages #list .btn-gameplay");
+
+      var tl = gsap.timeline();
+      tl.to($header, {
+        delay: 2,
+        height: 85,
+        ease: "expo.out",
+      }).to($title, {
+        duration: 1,
+        scale: 1,
+        opacity: 1,
+        ease: "expo.out",
+        onComplete: function () {
+          fancyShow($btn, step2);
+        },
+      });
+    }
+    function step2() {
+      theme.endTransition();
+
+      const $btn = $("#soft-pages #list .btn-gameplay");
+      $btn.one("click", function () {
+        theme.goToPage("gameplay");
+      });
+    }
+    step1();
+  },
   gameplay: function () {},
   preCheckout: function () {},
   checkout: function () {},

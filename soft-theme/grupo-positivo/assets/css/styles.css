@@ -518,6 +518,140 @@ body#soft main #soft-pages .soft-current-page#cart .btn-cart .bg {
   width: 349px;
   height: 139px;
 }
+body#soft main #soft-pages .soft-current-page#list {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+}
+body#soft main #soft-pages .soft-current-page#list .soft-scaled {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+body#soft main #soft-pages .soft-current-page#list .header {
+  background-image: url(../img/00_main/header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: -500vw;
+  width: 2000vw;
+  height: 0;
+}
+body#soft main #soft-pages .soft-current-page#list .title {
+  background-image: url(../img/05_lista/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left !important;
+  width: 100%;
+  height: 61px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  margin-top: 60px;
+  opacity: 0;
+}
+body#soft main #soft-pages .soft-current-page#list .list {
+  width: 1388px;
+  height: 650px;
+  display: flex;
+  flex-direction: row;
+}
+body#soft main #soft-pages .soft-current-page#list .list .list-bg {
+  background-image: url(../img/05_lista/box.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1388px;
+  height: 650px;
+  position: absolute;
+  z-index: -10;
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna {
+  padding-top: 115px;
+  width: 470px;
+  margin-left: 104px;
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item {
+  height: 53px;
+  display: flex;
+  flex-direction: row;
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(1) {
+  margin-left: calc(230px - 15px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(2) {
+  margin-left: calc(230px - 30px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(3) {
+  margin-left: calc(230px - 45px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(4) {
+  margin-left: calc(230px - 60px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(5) {
+  margin-left: calc(230px - 75px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(6) {
+  margin-left: calc(230px - 90px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(7) {
+  margin-left: calc(230px - 105px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(8) {
+  margin-left: calc(230px - 120px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(9) {
+  margin-left: calc(230px - 135px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(10) {
+  margin-left: calc(230px - 150px);
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item .mark {
+  width: 45px;
+  height: 47px;
+  margin-right: 15px;
+  margin-top: 5px;
+  background-image: url(../img/05_lista/check_nao_pego.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#list .list .coluna .item .mark[selected] {
+  background-image: url(../img/05_lista/check_pego.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#list .btn-gameplay {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  margin: auto;
+  right: 370px;
+  bottom: 130px;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#list .btn-gameplay::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#list .btn-gameplay .bg {
+  background-image: url(../img/07_pre-caixa/botao_ir.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
 body#soft .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
