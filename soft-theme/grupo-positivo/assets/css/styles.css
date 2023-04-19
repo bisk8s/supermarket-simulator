@@ -1207,6 +1207,66 @@ body#soft main #soft-pages .soft-current-page#gameplay .btn-prev .bg {
   width: 349px;
   height: 139px;
 }
+body#soft main #soft-pages .soft-current-page.checkout {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+}
+body#soft main #soft-pages .soft-current-page.checkout .btn::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page.checkout .header {
+  background-image: url(../img/00_main/header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: -500vw;
+  width: 2000vw;
+  height: 0;
+}
+body#soft main #soft-pages .soft-current-page.checkout .title {
+  background-position: center left !important;
+  width: 100vw;
+  height: 61px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  margin-top: 60px;
+  opacity: 0;
+}
+#checkout-items .title {
+  background-image: url(../img/08_caixa/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#checkout-payment .title {
+  background-image: url(../img/09_escolher-pagamento/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#checkout-end .title {
+  background-image: url(../img/10_jogar-novamente/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body#soft main #soft-pages .soft-current-page.checkout .soft-scaled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 body#soft .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;

@@ -741,6 +741,42 @@ body#soft
               width: 349px
               height: 139px
 
+        &.checkout
+          @include background('00_main/background.jpg')
+          background-size: cover
+          display: flex
+          .btn::before
+            content: none
+            .mesa
+          .header
+            @include background('00_main/header.png')
+            background-repeat: repeat-x
+            position: absolute
+            top: 0
+            left: -500vw
+            width: 2000vw
+            height: 0 //85px
+          .title
+            background-position: center left !important
+            width: 100vw
+            height: 61px
+            position: absolute
+            top: 0px
+            left: 30px
+            margin-top: 60px
+            opacity: 0
+            @at-root #checkout-items .title
+              @include background('08_caixa/txt.png')
+            @at-root #checkout-payment .title
+              @include background('09_escolher-pagamento/txt.png')
+            @at-root #checkout-end .title
+              @include background('10_jogar-novamente/txt.png')
+          .soft-scaled
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+
   .overlay
     background-color: rgba(0, 0, 0, 0.5)
     position: absolute

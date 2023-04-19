@@ -826,6 +826,50 @@ var theme = {
   checkout: function () {
     theme.default();
     theme.updateCart();
+
+    function step1() {
+      const $header = $("#soft-pages .checkout .header");
+      const $title = $("#soft-pages .checkout .title");
+
+      var tl = gsap.timeline();
+      tl.to($header, {
+        delay: 2,
+        height: 85,
+        ease: "expo.out",
+      }).to($title, {
+        duration: 1,
+        scale: 1,
+        opacity: 1,
+        ease: "expo.out",
+        onComplete: step2,
+      });
+    }
+    function step2() {
+      theme.endTransition();
+      theme.resetVars();
+
+      const $btnL = $("#soft-pages .checkout .btn-left");
+      const $btnR = $("#soft-pages .checkout .btn-right");
+
+      $btnL.one("click", function () {
+        $btnR.off("click");
+        theme.goToPage("cart");
+      });
+      $btnR.one("click", function () {
+        $btnL.off("click");
+        theme.goToPage("cart");
+      });
+    }
+    step1();
+  },
+  checkoutItem: function () {
+    theme.checkout();
+  },
+  checkoutPayment: function () {
+    theme.checkout();
+  },
+  checkoutEnd: function () {
+    theme.checkout();
   },
 
   updateList: function () {
