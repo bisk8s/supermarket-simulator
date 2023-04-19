@@ -753,6 +753,7 @@ body#soft main #soft-pages .soft-current-page#gameplay .prateleiras {
   top: 0;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .prateleiras .chars {
+  pointer-events: none !important;
   position: absolute;
   bottom: 100px;
 }

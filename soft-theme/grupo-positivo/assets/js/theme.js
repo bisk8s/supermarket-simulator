@@ -33,6 +33,12 @@ var theme = {
   },
 
   audios: {
+    beep: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/beep.mp3"],
+      loop: false,
+      volume: 0.6,
+      onend: function () {},
+    }),
     bg: new Howl({
       src: ["soft-theme/grupo-positivo/assets/medias/bg-sound.mp3"],
       loop: true,
@@ -45,28 +51,28 @@ var theme = {
       volume: 0.2,
       onend: function () {},
     }),
+    cloth: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/cloth.mp3"],
+      loop: false,
+      volume: 0.6,
+      onend: function () {},
+    }),
     overlayOpen: new Howl({
       src: ["soft-theme/grupo-positivo/assets/medias/overlay-open.mp3"],
       loop: false,
       volume: 1,
       onend: function () {},
     }),
-    correctAnswer: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/correct-answer.mp3"],
+    pickItem: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/pick-item.mp3"],
       loop: false,
       volume: 0.6,
       onend: function () {},
     }),
-    incorrectAnswer: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/incorrect-answer.mp3"],
+    success: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/success.mp3"],
       loop: false,
       volume: 0.6,
-      onend: function () {},
-    }),
-    endGameSuccess: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/end-game-success.mp3"],
-      loop: false,
-      volume: 1,
       onend: function () {},
     }),
   },
@@ -515,13 +521,9 @@ var theme = {
   },
   list: function () {
     theme.default();
+    const list = theme.updateList();
 
     $(".item").remove();
-
-    var list = theme.vars.list;
-    if (list.length === 0) {
-      list = buyable.sort(randomSort).slice(0, 18);
-    }
 
     list.forEach(function (item, index) {
       const found = theme.vars.cart.lastIndexOf(item) >= 0;
@@ -606,6 +608,7 @@ var theme = {
 
   gameplay: function () {
     theme.default();
+    theme.updateList();
     const char = theme.vars.char;
 
     $(".char").hide();
@@ -671,8 +674,37 @@ var theme = {
           },
         });
 
-        $(document).one("mouseup", function () {
+        $(document).one("mouseup", function (e) {
+          const event = e.originalEvent;
           $prateleira.off("mousemove");
+
+          const point = {
+            x: event.pageX,
+            y: event.pageY,
+          };
+
+          const boundingBox = {
+            x1: 500,
+            y1: 250,
+            x2: 610,
+            y2: 350,
+          };
+
+          const isInsideBoundingBox =
+            point.x >= boundingBox.x1 &&
+            point.x <= boundingBox.x2 &&
+            point.y >= boundingBox.y1 &&
+            point.y <= boundingBox.y2;
+
+          if (isInsideBoundingBox) {
+            theme.audios.pickItem.play();
+            const item = classAttr.split(" ")[1];
+            theme.vars.cart.push(item);
+            fancyShow($(".btn-list"));
+          } else {
+            theme.audios.cloth.play();
+          }
+
           gsap.to($newItem, {
             opacity: 0,
             scale: 0,
@@ -695,6 +727,8 @@ var theme = {
       const frameA = { attr: { "data-frame": "0" } };
       const frameB = { attr: { "data-frame": "1" } };
 
+      var distance = 1080;
+
       const anim = function () {
         gsap.fromTo($char, frameA, {
           duration: 0.1,
@@ -705,17 +739,17 @@ var theme = {
         });
       };
 
-      if (pos.left > -1332) {
+      if (pos.left > -1330) {
         fancyShow($btnNext);
         $btnNext.one("click", function () {
           anim();
           hideButtons();
           gsap.to($char, {
-            x: "+=1080",
+            x: "+=" + distance,
             duration: 0.5,
           });
           gsap.to($prateleira, {
-            x: "-=1080",
+            x: "-=" + distance,
             duration: 1,
             onComplete: setupControlls,
           });
@@ -728,7 +762,7 @@ var theme = {
           anim();
           hideButtons();
           gsap.to($char, {
-            x: "-=1080",
+            x: "-=" + distance,
             duration: 0.5,
             onComplete: function () {
               gsap.to($char, {
@@ -742,7 +776,7 @@ var theme = {
             duration: 0,
           });
           gsap.to($prateleira, {
-            x: "+=1080",
+            x: "+=" + distance,
             duration: 1,
             onComplete: setupControlls,
           });
@@ -759,6 +793,15 @@ var theme = {
     step1();
   },
   checkout: function () {},
+
+  updateList: function () {
+    const buyable = ratClone(theme.vars.buyable);
+    var list = theme.vars.list;
+    if (list.length === 0) {
+      list = buyable.sort(randomSort).slice(0, 18);
+    }
+    return list;
+  },
 
   resetVars: function () {
     const buyable = ratClone(theme.vars.buyable);
