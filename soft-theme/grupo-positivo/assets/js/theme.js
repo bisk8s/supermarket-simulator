@@ -5,7 +5,7 @@ var theme = {
   vars: {
     globalOverlayShow: false,
     char: "f",
-    list: [
+    buyable: [
       "abacate",
       "alface",
       "tomate",
@@ -28,6 +28,7 @@ var theme = {
       "suco-laranja",
       "suco-uva",
     ],
+    list: [],
     cart: [],
   },
 
@@ -450,6 +451,7 @@ var theme = {
     }
     function step2() {
       theme.endTransition();
+      theme.resetVars();
 
       const $btnF = $("#soft-pages #char-selection .btn-f");
       $btnF.one("click", function () {
@@ -513,6 +515,30 @@ var theme = {
   },
   list: function () {
     theme.default();
+
+    $(".item").remove();
+
+    var list = theme.vars.list;
+    if (list.length === 0) {
+      list = buyable.sort(randomSort).slice(0, 18);
+    }
+
+    list.forEach(function (item, index) {
+      const found = theme.vars.cart.lastIndexOf(item) >= 0;
+      const selected = found ? "selected" : "";
+      const itemCode =
+        '<div class="item"><div class="mark" ' +
+        selected +
+        ' ></div><div class="description"><p>' +
+        item +
+        "</p></div></div>";
+      $item = $(itemCode);
+      const columnSide = index < 9 ? "r" : "l";
+      const columnName = ".coluna-" + columnSide;
+      console.log(item, index, columnSide, columnName);
+      $(columnName).append($item);
+    });
+
     function step1() {
       const $header = $("#soft-pages #list .header");
       const $title = $("#soft-pages #list .title");
@@ -700,9 +726,11 @@ var theme = {
   checkout: function () {},
 
   resetVars: function () {
+    const buyable = ratClone(theme.vars.buyable);
+    const list = buyable.sort(randomSort).slice(0, 18);
     theme.vars = {
-      ...themetheme.vars,
-      ...{ char: "f" },
+      ...theme.vars,
+      ...{ char: "f", cart: [], list },
     };
   },
 };
@@ -748,6 +776,10 @@ $(document)
 
 function ratClone(obj) {
   return JSON.parse(JSON.stringify(obj));
+}
+
+function randomSort(a, b) {
+  return 0.5 - Math.random();
 }
 
 function fancyShow(element, onComplete = null) {
