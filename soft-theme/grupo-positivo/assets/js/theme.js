@@ -847,23 +847,36 @@ var theme = {
     function step2() {
       theme.endTransition();
       theme.resetVars();
-
-      const $btnL = $("#soft-pages .checkout .btn-left");
-      const $btnR = $("#soft-pages .checkout .btn-right");
-
-      $btnL.one("click", function () {
-        $btnR.off("click");
-        theme.goToPage("cart");
-      });
-      $btnR.one("click", function () {
-        $btnL.off("click");
-        theme.goToPage("cart");
-      });
     }
     step1();
   },
   checkoutItem: function () {
     theme.checkout();
+
+    const $content = $(".items-content");
+    theme.vars.list.forEach(function (e) {
+      $content.append('<div class="item ' + e + '" />');
+    });
+
+    const $btnL = $("#soft-pages .checkout .btn-left");
+    const $btnR = $("#soft-pages .checkout .btn-right");
+
+    $btnL.off("click").on("click", function () {
+      const limit = $content.width() / 2;
+      const x = gsap.getProperty(".items-content", "x");
+      const newX = x - 500;
+      console.log(newX);
+      const clampedX = clamp(-limit, limit, newX);
+      gsap.to($content, { x: clampedX, duration: 1 });
+    });
+
+    $btnR.off("click").on("click", function () {
+      const limit = $content.width() / 2;
+      const x = gsap.getProperty(".items-content", "x");
+      const newX = x + 500;
+      const clampedX = clamp(-limit, limit, newX);
+      gsap.to($content, { x: clampedX, duration: 1 });
+    });
   },
   checkoutPayment: function () {
     theme.checkout();
@@ -974,4 +987,8 @@ function booleanEasing(progress) {
   const threshold = 0.5;
   const response = progress >= threshold ? 1 : 0;
   return response;
+}
+
+function clamp(min, max, value) {
+  return Math.min(Math.max(value, min), max);
 }

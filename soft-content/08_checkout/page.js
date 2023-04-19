@@ -18,7 +18,9 @@ var pageCheckout = {
         <div class="value" />\
         <div class="table" />\
         <div class="cart-icon" />\
-        <div class="items-area" />\
+        <div class="items-area">\
+          <div class="items-content" />\
+        </div>\
         <div class="soft-btn btn btn-left" />\
         <div class="soft-btn btn btn-right" />\
       </div>\

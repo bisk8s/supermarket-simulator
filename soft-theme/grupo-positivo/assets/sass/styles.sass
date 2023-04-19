@@ -747,7 +747,6 @@ body#soft
           display: flex
           .btn::before
             content: none
-            .mesa
           .header
             @include background('00_main/header.png')
             background-repeat: repeat-x
@@ -776,6 +775,137 @@ body#soft
             justify-content: center
             align-items: center
             flex-direction: column
+          .table
+            @include background('08_caixa/mesa.jpg')
+            background-repeat: repeat-x
+            position: absolute
+            left: -500vw
+            width: 2000vw
+            height: 323px
+            position: absolute
+            bottom: 0
+          .cashier
+            @include background('08_caixa/caixa.png')
+            position: absolute
+            width: 791px
+            height: 451px
+            position: absolute
+            margin: auto
+            left: 0
+            right: 0
+            bottom: 323px
+          .scanner
+            @include background('08_caixa/caixa_leitor_ativo.png')
+            position: absolute
+            width: 794px
+            height: 514px
+            position: absolute
+            margin: auto
+            left: 0
+            right: 0
+            bottom: 323px
+          .cart-icon
+            @include background('08_caixa/icone_carrinho.png')
+            position: absolute
+            width: 151px
+            height: 107px
+            position: absolute
+            left: 20px
+            bottom: 265px
+            @at-root #checkout-end .cart-icon
+              display: none
+        &#checkout-items
+          .items-area
+            position: absolute
+            width: 1650px
+            height: 250px
+            bottom: 20px
+            white-space: nowrap
+            overflow: hidden
+            display: flex
+            align-content: center
+            justify-content: center
+            .items-content
+              flex: 1
+              .item
+                width: 150px
+                height: 150px
+                margin: 20px
+                display: inline-block
+                &:hover
+                  transform: scale(1.2)
+                &.abacate
+                  @include background('08_caixa/alimentos/abacate.png')
+                &.alface
+                  @include background('08_caixa/alimentos/alface.png')
+                &.banana
+                  @include background('08_caixa/alimentos/banana.png')
+                &.batata
+                  @include background('08_caixa/alimentos/batata.png')
+                &.beterraba
+                  @include background('08_caixa/alimentos/beterraba.png')
+                &.bife
+                  @include background('08_caixa/alimentos/bife.png')
+                &.biscoito
+                  @include background('08_caixa/alimentos/biscoito.png')
+                &.bolo
+                  @include background('08_caixa/alimentos/bolo.png')
+                &.brocolis
+                  @include background('08_caixa/alimentos/brocolis.png')
+                &.carne
+                  @include background('08_caixa/alimentos/carne.png')
+                &.cenoura
+                  @include background('08_caixa/alimentos/cenoura.png')
+                &.coca
+                  @include background('08_caixa/alimentos/coca.png')
+                &.frango
+                  @include background('08_caixa/alimentos/frango.png')
+                &.goiaba
+                  @include background('08_caixa/alimentos/goiaba.png')
+                &.iogurte
+                  @include background('08_caixa/alimentos/iogurte.png')
+                &.leite
+                  @include background('08_caixa/alimentos/leite.png')
+                &.limao
+                  @include background('08_caixa/alimentos/limao.png')
+                &.maca
+                  @include background('08_caixa/alimentos/maca.png')
+                &.mexirica
+                  @include background('08_caixa/alimentos/mexirica.png')
+                &.milho
+                  @include background('08_caixa/alimentos/milho.png')
+                &.pao
+                  @include background('08_caixa/alimentos/pao.png')
+                &.peixe
+                  @include background('08_caixa/alimentos/peixe.png')
+                &.queijo
+                  @include background('08_caixa/alimentos/queijo.png')
+                &.rosquinha
+                  @include background('08_caixa/alimentos/rosquinha.png')
+                &.salmao
+                  @include background('08_caixa/alimentos/salmao.png')
+                &.suco-laranja
+                  @include background('08_caixa/alimentos/suco-laranja.png')
+                &.suco-limao
+                  @include background('08_caixa/alimentos/suco-limao.png')
+                &.suco-uva
+                  @include background('08_caixa/alimentos/suco-uva.png')
+                &.tomate
+                  @include background('08_caixa/alimentos/tomate.png')
+                &.uva
+                  @include background('08_caixa/alimentos/uva.png')
+          .btn
+            position: absolute
+            width: 67px
+            height: 79px
+            background-size: 67px 79px
+            bottom: 120px
+            &.btn-left
+              @include background('08_caixa/voltar.png')
+              left: 20px
+            &.btn-right
+              @include background('08_caixa/ir.png')
+              right: 20px
 
   .overlay
     background-color: rgba(0, 0, 0, 0.5)

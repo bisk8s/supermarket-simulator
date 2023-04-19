@@ -1267,6 +1267,287 @@ body#soft main #soft-pages .soft-current-page.checkout .soft-scaled {
   align-items: center;
   flex-direction: column;
 }
+body#soft main #soft-pages .soft-current-page.checkout .table {
+  background-image: url(../img/08_caixa/mesa.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  left: -500vw;
+  width: 2000vw;
+  height: 323px;
+  position: absolute;
+  bottom: 0;
+}
+body#soft main #soft-pages .soft-current-page.checkout .cashier {
+  background-image: url(../img/08_caixa/caixa.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 791px;
+  height: 451px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 323px;
+}
+body#soft main #soft-pages .soft-current-page.checkout .scanner {
+  background-image: url(../img/08_caixa/caixa_leitor_ativo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 794px;
+  height: 514px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 323px;
+}
+body#soft main #soft-pages .soft-current-page.checkout .cart-icon {
+  background-image: url(../img/08_caixa/icone_carrinho.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 151px;
+  height: 107px;
+  position: absolute;
+  left: 20px;
+  bottom: 265px;
+}
+#checkout-end .cart-icon {
+  display: none;
+}
+
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area {
+  position: absolute;
+  width: 1650px;
+  height: 250px;
+  bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content {
+  flex: 1;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  display: inline-block;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item:hover {
+  transform: scale(1.2);
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.abacate {
+  background-image: url(../img/08_caixa/alimentos/abacate.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.alface {
+  background-image: url(../img/08_caixa/alimentos/alface.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.banana {
+  background-image: url(../img/08_caixa/alimentos/banana.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.batata {
+  background-image: url(../img/08_caixa/alimentos/batata.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.beterraba {
+  background-image: url(../img/08_caixa/alimentos/beterraba.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.bife {
+  background-image: url(../img/08_caixa/alimentos/bife.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.biscoito {
+  background-image: url(../img/08_caixa/alimentos/biscoito.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.bolo {
+  background-image: url(../img/08_caixa/alimentos/bolo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.brocolis {
+  background-image: url(../img/08_caixa/alimentos/brocolis.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.carne {
+  background-image: url(../img/08_caixa/alimentos/carne.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.cenoura {
+  background-image: url(../img/08_caixa/alimentos/cenoura.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.coca {
+  background-image: url(../img/08_caixa/alimentos/coca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.frango {
+  background-image: url(../img/08_caixa/alimentos/frango.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.goiaba {
+  background-image: url(../img/08_caixa/alimentos/goiaba.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.iogurte {
+  background-image: url(../img/08_caixa/alimentos/iogurte.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.leite {
+  background-image: url(../img/08_caixa/alimentos/leite.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.limao {
+  background-image: url(../img/08_caixa/alimentos/limao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.maca {
+  background-image: url(../img/08_caixa/alimentos/maca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.mexirica {
+  background-image: url(../img/08_caixa/alimentos/mexirica.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.milho {
+  background-image: url(../img/08_caixa/alimentos/milho.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.pao {
+  background-image: url(../img/08_caixa/alimentos/pao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.peixe {
+  background-image: url(../img/08_caixa/alimentos/peixe.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.queijo {
+  background-image: url(../img/08_caixa/alimentos/queijo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.rosquinha {
+  background-image: url(../img/08_caixa/alimentos/rosquinha.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.salmao {
+  background-image: url(../img/08_caixa/alimentos/salmao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.suco-laranja {
+  background-image: url(../img/08_caixa/alimentos/suco-laranja.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.suco-limao {
+  background-image: url(../img/08_caixa/alimentos/suco-limao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.suco-uva {
+  background-image: url(../img/08_caixa/alimentos/suco-uva.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.tomate {
+  background-image: url(../img/08_caixa/alimentos/tomate.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .items-area .items-content .item.uva {
+  background-image: url(../img/08_caixa/alimentos/uva.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .btn {
+  position: absolute;
+  width: 67px;
+  height: 79px;
+  background-size: 67px 79px;
+  bottom: 120px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .btn.btn-left {
+  background-image: url(../img/08_caixa/voltar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 20px;
+}
+body#soft main #soft-pages .soft-current-page#checkout-items .btn.btn-right {
+  background-image: url(../img/08_caixa/ir.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 20px;
+}
 body#soft .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
