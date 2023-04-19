@@ -9,9 +9,11 @@ var pageCart = {
   pageHtml:
     '\
       <div class="soft-scaled" initial-width="1920" initial-height="1080">\
-        <div class="centred">\
-          <div class="logo"></div>\
-          <div class="soft-btn btn-intro btn"><div class="bg"></div><p soft-page-content="btnIntro"></p></div>\
+        <div class="header" />\
+        <div class="title" />\
+        <div class="cart-container">\
+          <div class="cart" />\
+          <div class="soft-btn btn btn-cart btn-f"><div class="bg"/></div>\
         </div>\
       </div>\
     ',

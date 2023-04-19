@@ -396,6 +396,7 @@ body#soft main #soft-pages .soft-current-page#char-selection .title {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center left !important;
   width: 859px;
   height: 61px;
   position: absolute;
@@ -433,16 +434,82 @@ body#soft main #soft-pages .soft-current-page#char-selection .btn-char {
   width: 349px;
   height: 139px;
 }
-body#soft main #soft-pages .soft-current-page#char-selection .btn-char.btn-f {
-  left: 0px;
-}
-body#soft main #soft-pages .soft-current-page#char-selection .btn-char.btn-m {
-  left: 500px;
-}
 body#soft main #soft-pages .soft-current-page#char-selection .btn-char::before {
   content: none;
 }
 body#soft main #soft-pages .soft-current-page#char-selection .btn-char .bg {
+  background-image: url(../img/01_capa/botao_jogar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#cart {
+  background-image: url(../img/00_main/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+}
+body#soft main #soft-pages .soft-current-page#cart .soft-scaled {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body#soft main #soft-pages .soft-current-page#cart .header {
+  background-image: url(../img/00_main/header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: -500vw;
+  width: 2000vw;
+  height: 0;
+}
+body#soft main #soft-pages .soft-current-page#cart .title {
+  background-image: url(../img/04_carrinho/txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left !important;
+  width: 859px;
+  height: 61px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  margin-top: 60px;
+  opacity: 0;
+}
+body#soft main #soft-pages .soft-current-page#cart .cart-container .cart {
+  background-image: url(../img/04_carrinho/carrinho.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 340px;
+  height: 520px;
+  background-position: bottom center !important;
+  transform-origin: center bottom;
+  transform: scale(0);
+  opacity: 0;
+}
+body#soft main #soft-pages .soft-current-page#cart .btn-cart {
+  transform: scale(0);
+  margin: auto;
+  top: 0;
+  bottom: -450px;
+  right: 0;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#cart .btn-cart::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#cart .btn-cart .bg {
   background-image: url(../img/01_capa/botao_jogar.png);
   background-position: center;
   background-repeat: no-repeat;

@@ -429,21 +429,64 @@ var theme = {
 
       const $btnF = $("#soft-pages #char-selection .btn-f");
       $btnF.one("click", function () {
-        $btnF.off("click");
+        $btnM.off("click");
         theme.vars.char = "f";
         theme.goToPage("cart");
       });
 
       const $btnM = $("#soft-pages #char-selection .btn-m");
       $btnM.one("click", function () {
-        $btnM.off("click");
+        $btnF.off("click");
         theme.vars.char = "m";
         theme.goToPage("cart");
       });
     }
     step1();
   },
-  cart: function () {},
+  cart: function () {
+    theme.default();
+    function step1() {
+      const $header = $("#soft-pages #cart .header");
+      const $title = $("#soft-pages #cart .title");
+      const $cart = $("#soft-pages #cart .cart");
+      const $btnCart = $("#soft-pages #cart .btn-cart");
+
+      var tl = gsap.timeline();
+      tl.to($header, {
+        delay: 2,
+        height: 85,
+        ease: "expo.out",
+      })
+        .to($title, {
+          duration: 1,
+          scale: 1,
+          opacity: 1,
+          ease: "expo.out",
+        })
+        .to($btnCart, {
+          duration: 0.5,
+          scale: 1,
+          opacity: 1,
+          ease: "expo.out",
+        })
+        .to($cart, {
+          duration: 0.5,
+          scale: 1,
+          opacity: 1,
+          ease: "expo.out",
+          onComplete: step2,
+        });
+    }
+    function step2() {
+      theme.endTransition();
+
+      const $btnCart = $("#soft-pages #cart .btn-cart");
+      $btnCart.one("click", function () {
+        theme.goToPage("list");
+      });
+    }
+    step1();
+  },
   list: function () {},
   gameplay: function () {},
   preCheckout: function () {},
