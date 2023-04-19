@@ -716,6 +716,119 @@ body#soft main #soft-pages .soft-current-page#pre-checkout .btn-checkout .bg {
   width: 349px;
   height: 139px;
 }
+body#soft main #soft-pages .soft-current-page#gameplay {
+  background-image: url(../img/06_cenario/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-list {
+  transform: scale(0);
+  opacity: 0;
+  background-image: url(../img/06_cenario/icone_lista.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 175px;
+  height: 186px;
+  position: absolute;
+  left: 0;
+  top: 250px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-list::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleiras {
+  background-image: url(../img/06_cenario/prateleiras.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 5502px;
+  height: 1080px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile {
+  width: 318px;
+  height: 188px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile .profile-f {
+  position: absolute;
+  transform: scale(0);
+  opacity: 0;
+  background-image: url(../img/06_cenario/personagem_f.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 318px;
+  height: 188px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile .profile-m {
+  position: absolute;
+  transform: scale(0);
+  opacity: 0;
+  background-image: url(../img/06_cenario/personagem_m.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 318px;
+  height: 188px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-next {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: 40px;
+  bottom: 40px;
+  margin: auto;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-next::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-next .bg {
+  background-image: url(../img/07_pre-caixa/botao_ir.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-prev {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  margin: auto;
+  top: auto;
+  left: 40px;
+  right: auto;
+  bottom: 40px;
+  width: 349px;
+  height: 139px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-prev::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .btn-prev .bg {
+  background-image: url(../img/07_pre-caixa/botao_ir.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: scaleX(-1);
+  background-size: 100% 100%;
+  width: 349px;
+  height: 139px;
+}
 body#soft .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;

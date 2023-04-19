@@ -554,7 +554,77 @@ var theme = {
     step1();
   },
 
-  gameplay: function () {},
+  gameplay: function () {
+    theme.default();
+    function step1() {
+      const char = theme.vars.char;
+      const $profile = $("#soft-pages #gameplay .profile-" + char);
+      const $btn = $("#soft-pages #gameplay .btn-list");
+
+      var tl = gsap.timeline();
+      tl.to($profile, {
+        delay: 2,
+        duration: 1,
+        scale: 1,
+        opacity: 1,
+        ease: "expo.out",
+        onComplete: function () {
+          fancyShow($btn, step2);
+        },
+      });
+    }
+    function step2() {
+      theme.endTransition();
+
+      const $btn = $("#soft-pages #gameplay .btn-list");
+      $btn.one("click", function () {
+        theme.goToPage("list");
+      });
+
+      setupControlls();
+    }
+
+    function setupControlls() {
+      const $prateleira = $("#soft-pages #gameplay .prateleiras");
+      const $btnNext = $("#soft-pages #gameplay .btn-next");
+      const $btnPrev = $("#soft-pages #gameplay .btn-prev");
+
+      const pos = $prateleira.position();
+
+      if (pos.left > -1332) {
+        fancyShow($btnNext);
+        $btnNext.one("click", function () {
+          hideButtons();
+          gsap.to($prateleira, {
+            x: "-=1080",
+            duration: 1,
+            onComplete: setupControlls,
+          });
+        });
+      }
+
+      if (pos.left < 0) {
+        fancyShow($btnPrev);
+        $btnPrev.one("click", function () {
+          hideButtons();
+          gsap.to($prateleira, {
+            x: "+=1080",
+            duration: 1,
+            onComplete: setupControlls,
+          });
+        });
+      }
+
+      function hideButtons() {
+        $btnNext.off("click");
+        $btnPrev.off("click");
+        gsap.to($btnNext, { scale: 0, alpha: 0, duration: 0.2 });
+        gsap.to($btnPrev, { scale: 0, alpha: 0, duration: 0.2 });
+      }
+    }
+
+    step1();
+  },
   checkout: function () {},
 
   resetVars: function () {
@@ -608,7 +678,7 @@ function ratClone(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 
-function fancyShow(element, onComplete) {
+function fancyShow(element, onComplete = null) {
   var tl = gsap.timeline();
   tl.to(element, { opacity: 0, duration: 0.0 }).to(element, {
     opacity: 1,

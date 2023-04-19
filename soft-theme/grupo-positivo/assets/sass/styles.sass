@@ -165,6 +165,7 @@ body#soft
             height: 12%
             margin: auto
             transform: scale(0)
+
         // telas
         &#start
           @include background('00_main/background.jpg')
@@ -447,6 +448,86 @@ body#soft
               content: none
             .bg
               @include background('07_pre-caixa/botao_ir.png')
+              background-size: 100% 100%
+              width: 349px
+              height: 139px
+
+        &#gameplay
+          @include background('06_cenario/background.png')
+          background-size: contain
+          background-repeat: repeat-x
+          .btn-list
+            transform: scale(0)
+            opacity: 0
+            @include background('06_cenario/icone_lista.png')
+            width: 175px
+            height: 186px
+            position: absolute
+            left: 0
+            top: 250px
+            &::before
+              content: none
+          .prateleiras
+            @include background('06_cenario/prateleiras.png')
+            width: 5502px
+            height: 1080px
+            position: absolute
+            left: 0
+            top: 0
+          .profile
+            width: 318px
+            height: 188px
+            position: absolute
+            left: 0
+            top: 20px
+            .profile-f
+              position: absolute
+              transform: scale(0)
+              opacity: 0
+              @include background('06_cenario/personagem_f.png')
+              width: 318px
+              height: 188px
+            .profile-m
+              position: absolute
+              transform: scale(0)
+              opacity: 0
+              @include background('06_cenario/personagem_m.png')
+              width: 318px
+              height: 188px
+          .btn-next
+            opacity: 0
+            transform: scale(0)
+            position: absolute
+            top: auto
+            left: auto
+            right: 40px
+            bottom: 40px
+            margin: auto
+            width: 349px
+            height: 139px
+            &::before
+              content: none
+            .bg
+              @include background('07_pre-caixa/botao_ir.png')
+              background-size: 100% 100%
+              width: 349px
+              height: 139px
+          .btn-prev
+            opacity: 0
+            transform: scale(0)
+            position: absolute
+            margin: auto
+            top: auto
+            left: 40px
+            right: auto
+            bottom: 40px
+            width: 349px
+            height: 139px
+            &::before
+              content: none
+            .bg
+              @include background('07_pre-caixa/botao_ir.png')
+              transform: scaleX(-1)
               background-size: 100% 100%
               width: 349px
               height: 139px

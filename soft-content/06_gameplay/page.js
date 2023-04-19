@@ -9,10 +9,22 @@ var pageGameplay = {
   pageHtml:
     '\
       <div class="soft-scaled" initial-width="1920" initial-height="1080">\
-        <div class="centred">\
-          <div class="logo"></div>\
-          <div class="soft-btn btn-intro btn"><div class="bg"></div><p soft-page-content="btnIntro"></p></div>\
+        <div class="prateleiras" />\
+        <div class="items">\
         </div>\
+        <div class="char">\
+          <div class="char-f-a" />\
+          <div class="char-f-b" />\
+          <div class="char-m-a" />\
+          <div class="char-m-b" />\
+        </div>\
+        <div class="soft-btn btn btn-list" />\
+        <div class="profile" >\
+          <div class="profile-f" />\
+          <div class="profile-m" />\
+        </div>\
+        <div class="soft-btn btn btn-prev"><div class="bg"/></div>\
+        <div class="soft-btn btn btn-next"><div class="bg"/></div>\
       </div>\
     ',
 
