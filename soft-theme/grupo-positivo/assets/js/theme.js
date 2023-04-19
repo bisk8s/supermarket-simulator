@@ -69,6 +69,12 @@ var theme = {
       volume: 0.6,
       onend: function () {},
     }),
+    wrongItem: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/wrong-item.mp3"],
+      loop: false,
+      volume: 0.6,
+      onend: function () {},
+    }),
     success: new Howl({
       src: ["soft-theme/grupo-positivo/assets/medias/success.mp3"],
       loop: false,
@@ -521,10 +527,11 @@ var theme = {
   },
   list: function () {
     theme.default();
-    const list = theme.updateList();
+    theme.updateList();
 
     $(".item").remove();
 
+    var list = theme.vars.list;
     list.forEach(function (item, index) {
       const found = theme.vars.cart.lastIndexOf(item) >= 0;
       const selected = found ? "selected" : "";
@@ -566,7 +573,16 @@ var theme = {
 
       const $btn = $("#soft-pages #list .btn-gameplay");
       $btn.one("click", function () {
-        theme.goToPage("gameplay");
+        const cart = ratClone(theme.vars.buyable);
+        const list = ratClone(theme.vars.list);
+
+        const allItemsPresent = list.every((item) => cart.includes(item));
+
+        if (allItemsPresent) {
+          theme.goToPage("pre-checkout");
+        } else {
+          theme.goToPage("gameplay");
+        }
       });
     }
     step1();
@@ -697,10 +713,25 @@ var theme = {
             point.y <= boundingBox.y2;
 
           if (isInsideBoundingBox) {
-            theme.audios.pickItem.play();
             const item = classAttr.split(" ")[1];
             theme.vars.cart.push(item);
-            fancyShow($(".btn-list"));
+
+            const cart = ratClone(theme.vars.buyable);
+            const list = ratClone(theme.vars.list);
+
+            const allItemsPresent = list.every((item) => cart.includes(item));
+
+            if (allItemsPresent) {
+              theme.audios.success.play();
+              theme.goToPage("list");
+            } else {
+              if (list.includes(item)) {
+                theme.audios.pickItem.play();
+              } else {
+                theme.audios.wrongItem.play();
+              }
+              fancyShow($(".btn-list"));
+            }
           } else {
             theme.audios.cloth.play();
           }
@@ -800,7 +831,7 @@ var theme = {
     if (list.length === 0) {
       list = buyable.sort(randomSort).slice(0, 18);
     }
-    return list;
+    theme.vars.list = list;
   },
 
   resetVars: function () {
