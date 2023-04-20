@@ -62,6 +62,38 @@ var theme = {
       tomate: 2.25,
       uva: 2.05,
     },
+    names: {
+      abacate: "avocado",
+      alface: "lettuce",
+      banana: "banana",
+      batata: "potato",
+      beterraba: "beetroot",
+      bife: "beef",
+      biscoito: "biscuit",
+      bolo: "cake",
+      brocolis: "broccoli",
+      carne: "meat",
+      cenoura: "carrot",
+      coca: "coke",
+      frango: "chicken",
+      goiaba: "guava",
+      iogurte: "yogurt",
+      leite: "milk",
+      limao: "lemon",
+      maca: "apple",
+      mexirica: "tangerine",
+      milho: "corn",
+      pao: "bread",
+      peixe: "fish",
+      queijo: "cheese",
+      rosquinha: "donut",
+      salmao: "salmon",
+      "suco-laranja": "orange juice",
+      "suco-limao": "lemon juice",
+      "suco-uva": "grape juice",
+      tomate: "tomato",
+      uva: "grape",
+    },
   },
 
   audios: {
@@ -571,7 +603,7 @@ var theme = {
         '<div class="list-item"><div class="mark" ' +
         selected +
         ' ></div><div class="description"><p>' +
-        item +
+        theme.vars.names[item] +
         "</p></div></div>";
       $item = $(itemCode);
       const columnSide = index < 9 ? "r" : "l";
