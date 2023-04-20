@@ -576,7 +576,7 @@ var theme = {
       $item = $(itemCode);
       const columnSide = index < 9 ? "r" : "l";
       const columnName = ".coluna-" + columnSide;
-      console.log(item, index, columnSide, columnName);
+      // console.log(item, index, columnSide, columnName);
       $(columnName).append($item);
     });
 
@@ -605,10 +605,11 @@ var theme = {
 
       const $btn = $("#soft-pages #list .btn-gameplay");
       $btn.one("click", function () {
-        const cart = ratClone(theme.vars.buyable);
+        const cart = ratClone(theme.vars.cart);
         const list = ratClone(theme.vars.list);
 
-        const allItemsPresent = list.every((item) => cart.includes(item));
+        const allItemsPresent = verifyListFulfillness(list, cart);
+        // console.log(allItemsPresent);
 
         if (allItemsPresent) {
           theme.goToPage("pre-checkout");
@@ -726,16 +727,19 @@ var theme = {
           const event = e.originalEvent;
           $prateleira.off("mousemove");
 
+          const pos = $newItem.offset();
           const point = {
-            x: event.pageX,
-            y: event.pageY,
+            x: pos.left,
+            y: pos.top,
           };
 
+          // console.log(point);
+
           const boundingBox = {
-            x1: 500,
-            y1: 250,
-            x2: 610,
-            y2: 350,
+            x1: 515,
+            y1: 217,
+            x2: 589,
+            y2: 264,
           };
 
           const isInsideBoundingBox =
@@ -748,10 +752,10 @@ var theme = {
             const item = classAttr.split(" ")[1];
             theme.vars.cart.push(item);
 
-            const cart = ratClone(theme.vars.buyable);
+            const cart = ratClone(theme.vars.cart);
             const list = ratClone(theme.vars.list);
 
-            const allItemsPresent = list.every((item) => cart.includes(item));
+            const allItemsPresent = verifyListFulfillness(list, cart);
 
             if (allItemsPresent) {
               theme.audios.success.play();
@@ -897,7 +901,7 @@ var theme = {
       const limit = $content.width() / 2;
       const x = gsap.getProperty(".items-content", "x");
       const newX = x - 500;
-      console.log(newX);
+      // console.log(newX);
       const clampedX = clamp(-limit, limit, newX);
       gsap.to($content, { x: clampedX, duration: 1 });
     });
@@ -1191,4 +1195,14 @@ function booleanEasing(progress) {
 
 function clamp(min, max, value) {
   return Math.min(Math.max(value, min), max);
+}
+
+function verifyListFulfillness(list, cart) {
+  for (let item of list) {
+    const isMissing = !cart.includes(item);
+    if (isMissing) {
+      return false;
+    }
+  }
+  return true;
 }

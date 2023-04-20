@@ -579,42 +579,42 @@ body#soft main #soft-pages .soft-current-page#list .list .coluna {
   width: 470px;
   margin-left: 104px;
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item {
   height: 53px;
   display: flex;
   flex-direction: row;
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(1) {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(1) {
   margin-left: calc(230px - 15px);
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(2) {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(2) {
   margin-left: calc(230px - 30px);
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(3) {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(3) {
   margin-left: calc(230px - 45px);
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(4) {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(4) {
   margin-left: calc(230px - 60px);
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(5) {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(5) {
   margin-left: calc(230px - 75px);
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(6) {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(6) {
   margin-left: calc(230px - 90px);
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(7) {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(7) {
   margin-left: calc(230px - 105px);
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(8) {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(8) {
   margin-left: calc(230px - 120px);
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(9) {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(9) {
   margin-left: calc(230px - 135px);
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item:nth-child(10) {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item:nth-child(10) {
   margin-left: calc(230px - 150px);
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item .mark {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item .mark {
   width: 45px;
   height: 47px;
   margin-right: 15px;
@@ -624,7 +624,7 @@ body#soft main #soft-pages .soft-current-page#list .list .coluna .item .mark {
   background-repeat: no-repeat;
   background-size: contain;
 }
-body#soft main #soft-pages .soft-current-page#list .list .coluna .item .mark[selected] {
+body#soft main #soft-pages .soft-current-page#list .list .coluna .list-item .mark[selected] {
   background-image: url(../img/05_lista/check_pego.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -979,6 +979,186 @@ body#soft main #soft-pages .soft-current-page#gameplay .drag-item {
 body#soft main #soft-pages .soft-current-page#gameplay .drag-item.bolo {
   width: 200px;
   height: 200px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.abacate {
+  background-image: url(../img/08_caixa/alimentos/abacate.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.alface {
+  background-image: url(../img/08_caixa/alimentos/alface.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.banana {
+  background-image: url(../img/08_caixa/alimentos/banana.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.batata {
+  background-image: url(../img/08_caixa/alimentos/batata.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.beterraba {
+  background-image: url(../img/08_caixa/alimentos/beterraba.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.bife {
+  background-image: url(../img/08_caixa/alimentos/bife.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.biscoito {
+  background-image: url(../img/08_caixa/alimentos/biscoito.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.bolo {
+  background-image: url(../img/08_caixa/alimentos/bolo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.brocolis {
+  background-image: url(../img/08_caixa/alimentos/brocolis.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.carne {
+  background-image: url(../img/08_caixa/alimentos/carne.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.cenoura {
+  background-image: url(../img/08_caixa/alimentos/cenoura.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.coca {
+  background-image: url(../img/08_caixa/alimentos/coca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.frango {
+  background-image: url(../img/08_caixa/alimentos/frango.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.goiaba {
+  background-image: url(../img/08_caixa/alimentos/goiaba.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.iogurte {
+  background-image: url(../img/08_caixa/alimentos/iogurte.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.leite {
+  background-image: url(../img/08_caixa/alimentos/leite.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.limao {
+  background-image: url(../img/08_caixa/alimentos/limao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.maca {
+  background-image: url(../img/08_caixa/alimentos/maca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.mexirica {
+  background-image: url(../img/08_caixa/alimentos/mexirica.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.milho {
+  background-image: url(../img/08_caixa/alimentos/milho.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.pao {
+  background-image: url(../img/08_caixa/alimentos/pao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.peixe {
+  background-image: url(../img/08_caixa/alimentos/peixe.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.queijo {
+  background-image: url(../img/08_caixa/alimentos/queijo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.rosquinha {
+  background-image: url(../img/08_caixa/alimentos/rosquinha.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.salmao {
+  background-image: url(../img/08_caixa/alimentos/salmao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.suco-laranja {
+  background-image: url(../img/08_caixa/alimentos/suco-laranja.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.suco-limao {
+  background-image: url(../img/08_caixa/alimentos/suco-limao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.suco-uva {
+  background-image: url(../img/08_caixa/alimentos/suco-uva.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.tomate {
+  background-image: url(../img/08_caixa/alimentos/tomate.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .drag-item.uva {
+  background-image: url(../img/08_caixa/alimentos/uva.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .btn-next {
   opacity: 0;
