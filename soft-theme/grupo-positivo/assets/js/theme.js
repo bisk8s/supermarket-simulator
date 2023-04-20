@@ -561,14 +561,14 @@ var theme = {
     theme.default();
     theme.updateList();
 
-    $(".item").remove();
+    $(".list-item").remove();
 
     var list = theme.vars.list;
     list.forEach(function (item, index) {
       const found = theme.vars.cart.lastIndexOf(item) >= 0;
       const selected = found ? "selected" : "";
       const itemCode =
-        '<div class="item"><div class="mark" ' +
+        '<div class="list-item"><div class="mark" ' +
         selected +
         ' ></div><div class="description"><p>' +
         item +
@@ -648,7 +648,7 @@ var theme = {
 
       const $btn = $("#soft-pages #pre-checkout .btn-checkout");
       $btn.one("click", function () {
-        theme.goToPage("checkout");
+        theme.goToPage("checkout-items");
       });
     }
     step1();

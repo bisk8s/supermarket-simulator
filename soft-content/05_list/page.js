@@ -14,26 +14,26 @@ var pageList = {
         <div class="list">\
           <div class="list-bg" />\
           <div class="coluna coluna-l">\
-            <div class="item"><div class="mark" selected/><div class="description"><p>bread</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark" selected/><div class="description"><p>bread</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
           </div>\
           <div class="coluna coluna-r">\
-            <div class="item"><div class="mark" selected/><div class="description"><p>bread</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
-            <div class="item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark" selected/><div class="description"><p>bread</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
+            <div class="list-item"><div class="mark"/><div class="description"><p>milk</p></div></div>\
           </div>\
         </div>\
         <div class="soft-btn btn btn-gameplay">\
